@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-  <title>Sign In</title>
+  <title>Sign Up</title>
 
   <!-- ========== All CSS files linkup ========= -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -34,9 +34,11 @@
           <div class="auth-cover-wrapper bg-primary-100">
             <div class="auth-cover">
               <div class="title text-center">
-                <h1 class="text-primary mb-10">Selamat Datang Kembali</h1>
+                <h1 class="text-primary mb-10">Mulai Sekarang</h1>
                 <p class="text-medium">
-                  Silakan masuk ke akun admin Anda untuk mengelola sistem.
+                  Silakan buat akun baru untuk mulai menggunakan sistem
+                  <br class="d-sm-block" />
+                  dan menikmati seluruh fitur yang tersedia.
                 </p>
               </div>
               <div class="cover-image">
@@ -50,13 +52,13 @@
         </div>
         <!-- end col -->
         <div class="col-lg-6">
-          <div class="signin-wrapper">
+          <div class="signup-wrapper">
             <div class="form-wrapper">
-              <h6 class="mb-15">Sign In Form</h6>
+              <h6 class="mb-15">Sign Up Form</h6>
               <p class="text-sm mb-25">
-                Silakan masuk ke akun Anda untuk melanjutkan penggunaan sistem.
+                Silakan isi data berikut untuk membuat akun baru di sistem.
               </p>
-              <form id="loginForm" action="#">
+              <form id="registerForm" action="#">
                 <div class="row">
                   <div class="col-12">
                     <div class="input-style-1">
@@ -67,38 +69,43 @@
                   <!-- end col -->
                   <div class="col-12">
                     <div class="input-style-1">
-                      <label>Password</label>
-                      <input id="password" type="password" placeholder="Masukkan password Anda" required />
+                      <label>Nama</label>
+                      <input id="name" type="text" placeholder="Masukkan nama Anda" required />
                     </div>
                   </div>
                   <!-- end col -->
-                  <div class="col-xxl-12 col-lg-12 col-md-12">
-                    <div class="text-end mb-30">
-                      <a href="reset-password.html" class="hover-underline">
-                        Lupa Password?
-                      </a>
+                  <div class="col-12">
+                    <div class="input-style-1">
+                      <label>Kata Sandi</label>
+                      <input id="password" type="password" placeholder="Masukkan kata sandi" required />
+                    </div>
+                  </div>
+                  <!-- end col -->
+                  <div class="col-12">
+                    <div class="input-style-1">
+                      <label>Konfirmasi Kata Sandi</label>
+                      <input id="confirmPassword" type="password" placeholder="Ulangi kata sandi" required />
                     </div>
                   </div>
                   <!-- end col -->
                   <div class="col-12">
                     <div class="button-group d-flex justify-content-center flex-wrap">
                       <button class="main-btn primary-btn btn-hover w-100 text-center">
-                        Sign In
+                        Sign Up
                       </button>
                     </div>
                   </div>
                 </div>
                 <!-- end row -->
               </form>
-              <div class="singin-option pt-40">
+              <div class="signup-option pt-40">
                 <p class="text-sm text-medium text-dark text-center">
-                  Belum punya akun?
-                  <a href="signup.html">Daftar di sini</a>
+                  Sudah memiliki akun?
+                  <a href="signin.html">Masuk di sini</a>
                 </p>
               </div>
             </div>
           </div>
-
           <!-- ========== footer start =========== -->
           <footer class="footer">
             <div class="container-fluid">
@@ -145,43 +152,34 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
       const email = document.getElementById("email").value;
+      const name = document.getElementById("name").value;
       const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
 
-      if (email === "hydtech@gmail.com" || password === "1234") {
-        if (email !== "hydtech@gmail.com") {
-          Swal.fire({
-            title: 'Error!',
-            text: 'Email anda salah, silahkan ulangi kembali',
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 1500
-          })
-        } else if (password !== "1234") {
-          Swal.fire({
-            title: 'Error!',
-            text: 'Kata sandi anda salah, silahkan ulangi kembali',
-            icon: 'error',
-            showConfirmButton: false,
-            timer: 1500
-          })
-        } else {
-          setTimeout(() => {
-            sessionStorage.setItem("isLoggedIn", "true");
-            window.location.href = "dashboard.html";
-          }, 500);
-        }
-      } else {
+      if (email === "hydtech123@gmail.com") {
         Swal.fire({
-          title: 'Error!',
-          text: 'Email tidak terdaftar, silahkan daftar terlebih dahulu',
-          icon: 'error',
+          title: 'Warning!',
+          text: 'Email sudah terdaftar',
+          icon: 'warning',
           showConfirmButton: false,
           timer: 1500
         })
+      } else {
+        Swal.fire({
+          title: 'Success!',
+          text: 'Sign Up berhasil, email sedang di verifikasi oleh admin',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 1500
+        }).then(() => {
+          setTimeout(() => {
+            window.location.href = "signin.html";
+          }, 500);
+        });
       }
     });
   </script>

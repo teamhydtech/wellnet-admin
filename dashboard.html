@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-  <title>PlainAdmin Demo | Bootstrap 5 Admin Template</title>
+  <title>Dashboard</title>
 
   <!-- ========== All CSS files linkup ========= -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -422,7 +422,7 @@
                   </li>
                   <li class="divider"></li>
                   <li>
-                    <a href="#0"> <i class="lni lni-exit"></i> Sign Out </a>
+                    <a href="#0" onclick="logout()"> <i class="lni lni-exit"></i> Sign Out </a>
                   </li>
                 </ul>
               </div>
@@ -1752,6 +1752,12 @@
       },
     });
     // =========== chart four end
+
+    // Logout
+    function logout() {
+      sessionStorage.removeItem("isLoggedIn");
+      window.location.href = "signin.html";
+    }
   </script>
 </body>
 
