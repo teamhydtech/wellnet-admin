@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-    <title>Tambah Tipe Aplikasi</title>
+    <title>Manajemen User</title>
 
     <!-- ========== All CSS files linkup ========= -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
@@ -35,7 +35,7 @@
         </div>
         <nav class="sidebar-nav">
             <ul>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="dashboard.html">
                         <span class="icon">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -55,7 +55,7 @@
                     <hr />
                 </span>
                 <li class="nav-item nav-item-has-children">
-                    <a href="#" class="collapse" data-bs-toggle="collapse" data-bs-target="#ddmenu_1"
+                    <a href="#" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_1"
                         aria-controls="ddmenu_1" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -70,9 +70,9 @@
                         </span>
                         <span class="text">Manajemen Aplikasi</span>
                     </a>
-                    <ul id="ddmenu_1" class="collapsed dropdown-nav">
+                    <ul id="ddmenu_1" class="collapse dropdown-nav">
                         <li>
-                            <a href="tambah-tipe-aplikasi.html" class="active"> Tambah Tipe Aplikasi </a>
+                            <a href="tambah-tipe-aplikasi.html"> Tambah Tipe Aplikasi </a>
                         </li>
                         <li>
                             <a href="data-penggunaan-perangkat.html"> Data Penggunaan Perangkat </a>
@@ -192,7 +192,7 @@
                     <hr />
                 </span>
 
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a href="manajemen-user.html">
                         <span class="icon">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -205,7 +205,7 @@
                                 </path>
                             </svg>
                         </span>
-                        <span class="text">Manajamen User</span>
+                        <span class="text">Manajemen User</span>
                     </a>
                 </li>
             </ul>
@@ -288,7 +288,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="title">
-                                <h2>Tambah Tipe Aplikasi</h2>
+                                <h2>Manajemen User</h2>
                             </div>
                         </div>
                         <!-- end col -->
@@ -297,10 +297,7 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item">
-                                            <a href="#">Manajemen Aplikasi</a>
-                                        </li>
-                                        <li class="breadcrumb-item">
-                                            <a href="tambah-tipe-aplikasi.html">Tambah Tipe Aplikasi</a>
+                                            <a href="manajemen-user.html">Manajemen User</a>
                                         </li>
                                     </ol>
                                 </nav>
@@ -314,11 +311,11 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="card-style mb-30">
+                        <div class="card-style clients-table-card mb-30">
                             <div class="row align-items-center">
                                 <div class="title d-flex justify-content-between">
                                     <div class="left">
-                                        <h6 class="text-medium mb-20">List Tipe Aplikasi</h6>
+                                        <h6 class="text-medium mb-20">Daftar User</h6>
                                     </div>
                                     <div class="right">
                                         <button class="main-btn btn-sm primary-btn btn-hover mb-20"
@@ -330,17 +327,23 @@
                             </div>
                             <!-- end row -->
                             <div class="table-wrapper table-responsive">
-                                <table class="table">
+                                <table class="table lead-table">
                                     <thead>
                                         <tr>
                                             <th>
                                                 <h6>No</h6>
                                             </th>
                                             <th>
-                                                <h6>Nama Aplikasi</h6>
+                                                <h6>Username</h6>
                                             </th>
                                             <th>
-                                                <h6>Kategori Aplikasi</h6>
+                                                <h6>Email</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Role</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Status</h6>
                                             </th>
                                             <th>
                                                 <h6>Aksi</h6>
@@ -353,11 +356,17 @@
                                             <td>
                                                 <h6>1</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge success-badge-light">Verified</span>
                                             </td>
                                             <td>
                                                 <div class="action">
@@ -375,15 +384,21 @@
                                             <td>
                                                 <h6>2</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge success-badge-light">Verified</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -397,15 +412,21 @@
                                             <td>
                                                 <h6>3</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge success-badge-light">Verified</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -419,15 +440,21 @@
                                             <td>
                                                 <h6>4</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge success-badge-light">Verified</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -441,15 +468,21 @@
                                             <td>
                                                 <h6>5</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge success-badge-light">Verified</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -463,15 +496,21 @@
                                             <td>
                                                 <h6>6</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge success-badge-light">Verified</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -485,15 +524,21 @@
                                             <td>
                                                 <h6>7</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge danger-badge-light">Rejected</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -507,15 +552,21 @@
                                             <td>
                                                 <h6>8</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge success-badge-light">Verified</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -529,15 +580,21 @@
                                             <td>
                                                 <h6>9</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge warning-badge-light">Pending</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -551,15 +608,21 @@
                                             <td>
                                                 <h6>10</h6>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Instagram</p>
+                                            <td>
+                                                <p>Hydtech</p>
                                             </td>
-                                            <td class="min-width">
-                                                <p>Social</p>
+                                            <td>
+                                                <p>hydtech@gmail.com</p>
+                                            </td>
+                                            <td>
+                                                <p>Admin</p>
+                                            </td>
+                                            <td>
+                                                <span class="main-badge success-badge-light">Verified</span>
                                             </td>
                                             <td>
                                                 <div class="action">
-                                                    <button class="text-regular">
+                                                    <button class="text-dark">
                                                         <i class="lni lni-pencil"></i>
                                                     </button>
                                                     <button class="text-danger">
@@ -569,7 +632,6 @@
                                             </td>
                                         </tr>
                                         <!-- end table row -->
-
                                     </tbody>
                                 </table>
                                 <!-- end table -->
@@ -591,13 +653,11 @@
                         </div>
                         <!-- end card -->
                     </div>
-                    <!-- end col -->
                 </div>
-                <!-- end row -->
+                <!-- End Row -->
 
             </div>
             <!-- end container -->
-
             <!-- ======== add task modal start =========== -->
             <div class="add-task-modal">
                 <div class="modal fade" id="addNewModal" tabindex="-1" aria-hidden="false">
@@ -608,25 +668,49 @@
                                     <div class="col-lg-12">
                                         <div class="card-style">
                                             <h2 class="mb-25">Form Create</h2>
-                                            <form id="formTambahAplikasi" action="#">
+                                            <form id="formUser" action="#">
                                                 <div class="row">
                                                     <div class="col-6">
                                                         <div class="input-style-1">
-                                                            <label>Nama Aplikasi</label>
-                                                            <input id="nama" type="text"
-                                                                placeholder="Masukkan nama aplikasi" required />
+                                                            <label>Username</label>
+                                                            <input id="username" type="text"
+                                                                placeholder="Masukkan username" required />
                                                         </div>
                                                     </div>
                                                     <!-- end col -->
                                                     <div class="col-6">
+                                                        <div class="input-style-1">
+                                                            <label>Email</label>
+                                                            <input id="email" type="email" placeholder="Masukkan email"
+                                                                required />
+                                                        </div>
+                                                    </div>
+                                                    <!-- end col -->
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
                                                         <div class="select-style-1">
-                                                            <label>Kategori Aplikasi</label>
+                                                            <label>Role</label>
                                                             <div class="select-position">
-                                                                <select id="kategori" class="light-bg" required>
-                                                                    <option selected>Select Kategori Aplikasi</option>
-                                                                    <option value="Social">Social</option>
-                                                                    <option value="Entertainment">Entertainment</option>
-                                                                    <option value="Education">Education</option>
+                                                                <select id="role" class="light-bg" required>
+                                                                    <option selected>Select Role</option>
+                                                                    <option value="Super Admin">Super Admin</option>
+                                                                    <option value="Admin">Admin</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end select -->
+                                                    </div>
+                                                    <!-- end col -->
+                                                    <div class="col-6">
+                                                        <div class="select-style-1">
+                                                            <label>Status</label>
+                                                            <div class="select-position">
+                                                                <select id="status" class="light-bg" required>
+                                                                    <option selected>Select Status</option>
+                                                                    <option value="Verified">Verified</option>
+                                                                    <option value="Pending">Pending</option>
+                                                                    <option value="Rejected">Rejected</option>
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -703,14 +787,18 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        document.getElementById("formTambahAplikasi").addEventListener("submit", function (e) {
+        // Form Modal
+        document.getElementById("formUser").addEventListener("submit", function (e) {
             e.preventDefault();
 
-            const nama = document.getElementById("nama").value;
-            const kategoriSelected = document.getElementById("kategori");
-            let kategori = kategoriSelected.value;
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const roleSelected = document.getElementById("role");
+            let role = roleSelected.value;
+            const statusSelected = document.getElementById("status");
+            let status = statusSelected.value;
 
-            if (nama !== "" && kategori !== "") {
+            if (username !== "" && email !== "" && role !== "" && status !== "") {
                 Swal.fire({
                     title: 'Success!',
                     text: 'Data berhasil disimpan!',
