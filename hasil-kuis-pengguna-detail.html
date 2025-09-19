@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-    <title>Materi Psychoeducation</title>
+    <title>Detail Hasil Kuis Pengguna</title>
 
     <!-- ========== All CSS files linkup ========= -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
@@ -163,10 +163,10 @@
                             <a href="tema-kuis.html"> Tema Kuis </a>
                         </li>
                         <li>
-                            <a href="hasil-kuis-pengguna.html"> Hasil Kuis Pengguna </a>
+                            <a href="hasil-kuis-pengguna.html" class="active"> Hasil Kuis Pengguna </a>
                         </li>
                         <li>
-                            <a href="materi-psychoeducation.html" class="active"> Materi Psychoeducation </a>
+                            <a href="materi-psychoeducation.html"> Materi Psychoeducation </a>
                         </li>
                         <li>
                             <a href="laporan-kinerja-pengguna.html"> Laporan Kinerja Pengguna </a>
@@ -289,7 +289,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="title">
-                                <h2>Materi Psychoeducation</h2>
+                                <h2>Hasil Kuis Pengguna</h2>
                             </div>
                         </div>
                         <!-- end col -->
@@ -301,7 +301,10 @@
                                             <a href="#">Weekly Quiz & Psychoeducation</a>
                                         </li>
                                         <li class="breadcrumb-item">
-                                            <a href="materi-psychoeducation.html">Materi Psychoeducation</a>
+                                            <a href="hasil-kuis-pengguna.html">Hasil Kuis Pengguna</a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a href="hasil-kuis-pengguna-detail.html">Details</a>
                                         </li>
                                     </ol>
                                 </nav>
@@ -315,33 +318,33 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="card-style clients-table-card mb-30">
+                        <div class="card-style mb-30">
                             <div class="row align-items-center">
                                 <div class="title d-flex justify-content-between">
                                     <div class="left">
-                                        <h6 class="text-medium mb-20">Daftar Materi Psychoeducation</h6>
-                                    </div>
-                                    <div class="right">
-                                        <button class="main-btn btn-sm primary-btn btn-hover mb-20"
-                                            data-bs-toggle="modal" data-bs-target="#addNewModal">
-                                            <i class="lni lni-plus"></i> Add New
-                                        </button>
+                                        <h6 class="text-medium mb-20">Detail Hasil Kuis, Hydtech</h6>
                                     </div>
                                 </div>
                             </div>
                             <!-- end row -->
                             <div class="table-wrapper table-responsive">
-                                <table class="table lead-table">
+                                <table class="table">
                                     <thead>
                                         <tr>
                                             <th>
                                                 <h6>No</h6>
                                             </th>
                                             <th>
-                                                <h6>Title</h6>
+                                                <h6>Pertanyaan</h6>
                                             </th>
                                             <th>
-                                                <h6>Aksi</h6>
+                                                <h6>Tema Kuis</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Jawaban Benar</h6>
+                                            </th>
+                                            <th>
+                                                <h6>Jawaban User</h6>
                                             </th>
                                         </tr>
                                         <!-- end table row-->
@@ -351,21 +354,18 @@
                                             <td>
                                                 <h6>1</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -373,21 +373,18 @@
                                             <td>
                                                 <h6>2</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -395,21 +392,18 @@
                                             <td>
                                                 <h6>3</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -417,21 +411,18 @@
                                             <td>
                                                 <h6>4</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -439,21 +430,18 @@
                                             <td>
                                                 <h6>5</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -461,21 +449,18 @@
                                             <td>
                                                 <h6>6</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -483,21 +468,18 @@
                                             <td>
                                                 <h6>7</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -505,21 +487,18 @@
                                             <td>
                                                 <h6>8</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -527,21 +506,18 @@
                                             <td>
                                                 <h6>9</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
@@ -549,24 +525,22 @@
                                             <td>
                                                 <h6>10</h6>
                                             </td>
-                                            <td>
+                                            <td class="min-width">
+                                                <p>Pernyataan "Semua informasi yang viral di media sosial sudah pasti
+                                                    benar dan terverifikasi.</p>
+                                            </td>
+                                            <td class="min-width">
                                                 <p>Pengantar Literasi Digital</p>
                                             </td>
                                             <td class="min-width">
-                                                <div class="action">
-                                                    <button onclick="detail()" class="text-dark">
-                                                        <i class="lni lni-eye"></i>
-                                                    </button>
-                                                    <button class="text-dark">
-                                                        <i class="lni lni-pencil"></i>
-                                                    </button>
-                                                    <button class="text-danger">
-                                                        <i class="lni lni-trash-can"></i>
-                                                    </button>
-                                                </div>
+                                                <p>Fakta</p>
+                                            </td>
+                                            <td class="min-width">
+                                                <p>Fakta</p>
                                             </td>
                                         </tr>
                                         <!-- end table row -->
+
                                     </tbody>
                                 </table>
                                 <!-- end table -->
@@ -588,69 +562,11 @@
                         </div>
                         <!-- end card -->
                     </div>
+                    <!-- end col -->
                 </div>
-                <!-- End Row -->
+                <!-- end row -->
             </div>
             <!-- end container -->
-
-            <!-- ======== add task modal start =========== -->
-            <div class="add-task-modal">
-                <div class="modal fade" id="addNewModal" tabindex="-1" aria-hidden="false">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content card-style">
-                            <div class="modal-body">
-                                <div class="form-layout-wrapper">
-                                    <div class="col-lg-12">
-                                        <div class="card-style">
-                                            <h2 class="mb-25">Form Create</h2>
-                                            <form id="formPsychoeducation" action="#">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="input-style-1">
-                                                            <label>Title</label>
-                                                            <input id="title" type="text" placeholder="Masukkan title"
-                                                                required />
-                                                        </div>
-                                                    </div>
-                                                    <!-- end col -->
-                                                    <div class="col-12">
-                                                        <div class="input-style-1">
-                                                            <label>Content</label>
-                                                            <textarea id="content" placeholder="Masukkan content"
-                                                                rows="5"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <!-- end col -->
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div
-                                                            class="button-group d-flex justify-content-center flex-wrap">
-                                                            <button type="submit"
-                                                                class="main-btn primary-btn btn-hover m-2">
-                                                                Save
-                                                            </button>
-                                                            <button type="button" data-bs-dismiss="modal"
-                                                                class="main-btn danger-btn-outline m-2">
-                                                                Cancel
-                                                            </button>
-                                                        </div>
-                                                        <!-- end row -->
-                                                    </div>
-                                                    <!-- end col -->
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <!-- end card -->
-                                    </div>
-                                    <!-- end col -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ======== add task modal end =========== -->
         </section>
         <!-- ========== section end ========== -->
 
@@ -692,35 +608,8 @@
     <script src="./assets/js/datatable.js"></script>
     <script src="./assets/js/Sortable.min.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        // Form Modal
-        document.getElementById("formPsychoeducation").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const title = document.getElementById("title").value;
-            const content = document.getElementById("content").value;
-
-            if (title !== "" && content !== "") {
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Data berhasil disimpan!',
-                    icon: 'success',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            } else {
-                Swal.fire({
-                    title: 'Error!',
-                    text: 'Data gagal disimpan!',
-                    icon: 'error',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            }
-        });
-
         // Logout
         function logout() {
             sessionStorage.removeItem("isLoggedIn");
