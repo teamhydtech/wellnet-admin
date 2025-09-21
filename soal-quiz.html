@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
-    <title>Materi Psychoeducation</title>
+    <title>Soal Quiz</title>
 
     <!-- ========== All CSS files linkup ========= -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
@@ -95,10 +95,10 @@
                             <a href="tema-quiz.html"> Tema Quiz </a>
                         </li>
                         <li>
-                            <a href="soal-quiz.html"> Soal Quiz </a>
+                            <a href="soal-quiz.html" class="active"> Soal Quiz </a>
                         </li>
                         <li>
-                            <a href="materi-psychoeducation.html" class="active"> Materi Psychoeducation </a>
+                            <a href="materi-psychoeducation.html"> Materi Psychoeducation </a>
                         </li>
                         <li>
                             <a href="log-quiz-user.html"> Log Quiz User </a>
@@ -213,7 +213,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="title">
-                                <h2>Materi Psychoeducation</h2>
+                                <h2>Soal Quiz</h2>
                             </div>
                         </div>
                         <!-- end col -->
@@ -224,7 +224,7 @@
                                         <li class="breadcrumb-item">
                                             <a href="#">Quiz & Psychoeducation</a>
                                         </li>
-                                        <li class="breadcrumb-item active">Materi Psychoeducation</li>
+                                        <li class="breadcrumb-item active">Soal Quiz</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -242,13 +242,13 @@
                                 <div class="row align-items-center">
                                     <div class="title d-flex justify-content-between">
                                         <div class="left">
-                                            <h6 class="mb-10">Daftar Materi Psychoeducation</h6>
+                                            <h6 class="mb-10">Daftar Soal Quiz</h6>
                                         </div>
                                         <div class="right">
-                                            <a href="materi-psychoeducation-create.html"
-                                                class="main-btn btn-sm primary-btn btn-hover mb-20">
-                                                <i class="lni lni-plus"></i>Add New
-                                            </a>
+                                            <button class="main-btn btn-sm primary-btn btn-hover mb-20"
+                                                data-bs-toggle="modal" data-bs-target="#addNewModal">
+                                                <i class="lni lni-plus"></i> Add New
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -260,7 +260,16 @@
                                                     <h6>No</h6>
                                                 </th>
                                                 <th style="min-width: 200px;">
-                                                    <h6>Title</h6>
+                                                    <h6>Pertanyaan</h6>
+                                                </th>
+                                                <th style="min-width: 200px;">
+                                                    <h6>Tema Quiz</h6>
+                                                </th>
+                                                <th style="min-width: 200px;">
+                                                    <h6>Jawaban Benar</h6>
+                                                </th>
+                                                <th style="min-width: 200px;">
+                                                    <h6>Opsi</h6>
                                                 </th>
                                                 <th style="min-width: 100px">
                                                     <h6>Aksi</h6>
@@ -273,12 +282,22 @@
                                                     <h6>1</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -290,12 +309,29 @@
                                                     <h6>2</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Manakah definisi yang paling tepat untuk "Literasi Digital"?</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Kemampuan untuk menemukan, mengevaluasi, menggunakan, dan membuat
+                                                        informasi secara bijak melalui teknologi digital</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Kemampuan menggunakan komputer dan internet dengan cepat.
+                                                        </li>
+                                                        <li>2. Kemampuan untuk menemukan, mengevaluasi, menggunakan, dan
+                                                            membuat informasi secara bijak melalui teknologi digital.
+                                                        </li>
+                                                        <li>3. Kemampuan untuk memiliki semua aplikasi media sosial
+                                                            terbaru.</li>
+                                                        <li>4. Kemampuan untuk mengunduh aplikasi tanpa membaca
+                                                            deskripsi.</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -307,12 +343,22 @@
                                                     <h6>3</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -324,12 +370,22 @@
                                                     <h6>4</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -341,12 +397,22 @@
                                                     <h6>5</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -358,12 +424,22 @@
                                                     <h6>6</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -375,12 +451,22 @@
                                                     <h6>7</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -392,12 +478,22 @@
                                                     <h6>8</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -409,12 +505,22 @@
                                                     <h6>9</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -426,12 +532,22 @@
                                                     <h6>10</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -443,12 +559,22 @@
                                                     <h6>11</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -460,12 +586,22 @@
                                                     <h6>12</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -477,12 +613,22 @@
                                                     <h6>13</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -494,12 +640,22 @@
                                                     <h6>14</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -511,12 +667,22 @@
                                                     <h6>15</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -528,12 +694,22 @@
                                                     <h6>16</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -545,12 +721,22 @@
                                                     <h6>17</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -562,12 +748,22 @@
                                                     <h6>18</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -579,12 +775,22 @@
                                                     <h6>19</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -596,12 +802,22 @@
                                                     <h6>20</h6>
                                                 </td>
                                                 <td>
-                                                    <p>Amankah Data Pribadimu?</p>
+                                                    <p>Pernyataan "Semua informasi yang viral di media sosial sudah
+                                                        pasti benar dan terverifikasi.</p>
                                                 </td>
                                                 <td>
-                                                    <a href="materi-psychoeducation-detail.html"
-                                                        class="secondary-btn-outline btn-hover me-2">
-                                                        <i class="lni lni-eye"></i></a>
+                                                    <p>Pengantar Literasi Digital</p>
+                                                </td>
+                                                <td>
+                                                    <p>Mitos</p>
+                                                </td>
+                                                <td>
+                                                    <ol>
+                                                        <li>1. Fakta</li>
+                                                        <li>2. Mitos</li>
+                                                    </ol>
+                                                </td>
+                                                <td>
                                                     <a href="#" class="warning-btn-outline btn-hover me-2">
                                                         <i class="lni lni-pencil"></i></a>
                                                     <a href="#" class="danger-btn-outline btn-hover">
@@ -620,6 +836,98 @@
 
             </div>
             <!-- end container -->
+
+            <!-- ======== add task modal start =========== -->
+            <div class="add-task-modal">
+                <div class="modal fade" id="addNewModal" tabindex="-1" aria-hidden="false">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content card-style">
+                            <div class="modal-body">
+                                <div class="form-layout-wrapper">
+                                    <div class="col-lg-12">
+                                        <div class="card-style">
+                                            <h2 class="mb-25">Form Create Soal Quiz</h2>
+                                            <form id="formTemaQuiz" action="#">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="input-style-1">
+                                                            <label>Pertanyaan</label>
+                                                            <textarea id="pertanyaan" placeholder="Masukkan pertanyaan"
+                                                                rows="5"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end col -->
+                                                    <div class="col-6">
+                                                        <div class="select-style-2">
+                                                            <label>Tema Quiz</label>
+                                                            <div class="select-position">
+                                                                <select id="tema-quiz" required>
+                                                                    <option selected>Pilih Tema Quiz</option>
+                                                                    <option value="1">Pengantar Literasi Digital
+                                                                    </option>
+                                                                    <option value="2">Privasi & Keamanan Data</option>
+                                                                    <option value="3">Cyberbullying & Empati Daring
+                                                                    </option>
+                                                                    <option value="4">Phishing & Penipuan Digital
+                                                                    </option>
+                                                                    <option value="5">Hoax & Disinformasi</option>
+                                                                    <option value="6">Jejak Digital & Reputasi</option>
+                                                                    <option value="7">Topik: Online Gaming & Etika
+                                                                    </option>
+                                                                    <option value="8">Digital Wellbeing</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end col -->
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="input-style-1">
+                                                            <label>Jawaban Benar</label>
+                                                            <input id="jawaban-benar" type="text"
+                                                                placeholder="Masukkan Jawaban Benar" required />
+                                                        </div>
+                                                    </div>
+                                                    <!-- end col -->
+                                                    <div class="col-6">
+                                                        <div class="input-style-1">
+                                                            <label>Opsi</label>
+                                                            <div id="input-opsi-container"></div>
+
+                                                            <button type="button" id="addBtn"
+                                                                class="btn btn-primary">Add</button>
+                                                            <button type="button" id="deleteBtn"
+                                                                class="btn btn-danger">Delete</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end col -->
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="button-group d-flex justify-content-center flex-wrap">
+                                                        <button type="submit"
+                                                            class="main-btn primary-btn btn-hover m-2">
+                                                            Save
+                                                        </button>
+                                                        <button type="button" data-bs-dismiss="modal"
+                                                            class="main-btn danger-btn-outline m-2">
+                                                            Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- end row -->
+                                            </form>
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                    <!-- end col -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ======== add task modal end =========== -->
         </section>
         <!-- ========== section end ========== -->
 
@@ -667,6 +975,73 @@
         // DataTable
         const dataTable = new simpleDatatables.DataTable("#table", {
             searchable: true,
+        });
+
+        // Form Modal
+        document.getElementById("formTemaQuiz").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const pertanyaan = document.getElementById("pertanyaan").value;
+            const selectedTemaQuiz = document.getElementById("tema-quiz");
+            const temaQuiz = selectedTemaQuiz.value;
+            const jawabanBenar = document.getElementById("jawaban-benar").value;
+
+            if (pertanyaan !== "" && temaQuiz !== "" && jawabanBenar !== "" && counter > 0) {
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Data berhasil disimpan!',
+                    icon: 'success',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Data gagal disimpan!',
+                    icon: 'error',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            }
+        });
+
+        // Dynamic Input Stack
+        const opsiContainer = document.getElementById('input-opsi-container');
+        const addBtn = document.getElementById('addBtn');
+        const deleteBtn = document.getElementById('deleteBtn');
+
+        let counter = 3;
+
+        for (let index = 1; index < counter; index++) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = 'Isi opsi-' + index;
+            input.className = "mb-2";
+            input.required = true;
+
+            opsiContainer.appendChild(input);
+        }
+
+        // Add Input
+        addBtn.addEventListener('click', () => {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = 'Isi opsi-' + counter;
+            input.className = "mb-2";
+            input.required = true;
+
+            opsiContainer.appendChild(input);
+            counter++;
+        });
+
+        // Delete input
+        deleteBtn.addEventListener('click', () => {
+            if (opsiContainer.lastChild) {
+                opsiContainer.removeChild(opsiContainer.lastChild);
+                counter--;
+            } else {
+                alert('Stack kosong!');
+            }
         });
 
         // Logout
