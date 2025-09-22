@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="./assets/css/quill/snow.css" />
     <link rel="stylesheet" href="./assets/css/fullcalendar.css" />
     <link rel="stylesheet" href="./assets/css/morris.css" />
-    <link rel="stylesheet" href="./assets/css/datatable.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/datatable.css" /> -->
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css">
 </head>
 
 <body>
@@ -239,21 +240,36 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card-style mb-30">
-                                <h6 class="mb-10">Daftar Log Quiz User</h6>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h6 class="mb-10">Daftar Log Quiz User</h6>
+                                        <div class="select-style-2">
+                                            <div class="select-position">
+                                                <select id="categoryFilter">
+                                                    <option value=""> --- Filter Pelanggaran --- </option>
+                                                    <option value="Downtime">Downtime</option>
+                                                    <option value="Tidur">Tidur</option>
+                                                    <option value="Batas Waktu Penggunaan">Batas Waktu Penggunaan
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="table-responsive">
                                     <table id="table">
                                         <thead>
                                             <tr>
-                                                <th style="min-width: 75px;">
+                                                <th>
                                                     <h6>No</h6>
                                                 </th>
-                                                <th style="min-width: 200px;">
+                                                <th>
                                                     <h6>Username</h6>
                                                 </th>
-                                                <th style="min-width: 200px;">
+                                                <th>
                                                     <h6>Pelanggaran</h6>
                                                 </th>
-                                                <th style="min-width: 200px;">
+                                                <th>
                                                     <h6>Timestamp</h6>
                                                 </th>
                                             </tr>
@@ -519,7 +535,7 @@
                                                     <p>user</p>
                                                 </td>
                                                 <td>
-                                                    <p>Melewati waktu downtime</p>
+                                                    <p>Melewati batas waktu penggunaan aplikasi</p>
                                                 </td>
                                                 <td>
                                                     <p>2025-09-22 04:15:07</p>
@@ -533,7 +549,7 @@
                                                     <p>user</p>
                                                 </td>
                                                 <td>
-                                                    <p>Melewati waktu downtime</p>
+                                                    <p>Melewati batas waktu tidur</p>
                                                 </td>
                                                 <td>
                                                     <p>2025-09-22 04:15:07</p>
@@ -594,12 +610,21 @@
     <script src="./assets/js/Sortable.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
 
     <script>
         // DataTable
-        const dataTable = new simpleDatatables.DataTable("#table", {
-            searchable: true,
+        $(document).ready(function () {
+            var table = $('#table').DataTable();
+
+            $('#categoryFilter').on('change', function () {
+                var val = $.fn.dataTable.util.escapeRegex($(this).val());
+
+                table.column(2).search(val, true, false).draw();
+            });
         });
+
 
         // Logout
         function logout() {

@@ -230,6 +230,73 @@
         </div>
         <!-- ========== title-wrapper end ========== -->
 
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="icon-card mb-30">
+              <div class="icon purple">
+                <i class="lni lni-users"></i>
+              </div>
+              <div class="content">
+                <h6 class="mb-10">Jumlah Users</h6>
+                <h3 class="text-bold mb-10">34567</h3>
+              </div>
+            </div>
+            <!-- End Icon Cart -->
+          </div>
+          <!-- End Col -->
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="icon-card mb-30">
+              <div class="icon primary">
+                <i class="lni lni-alarm-clock"></i>
+              </div>
+              <div class="content">
+                <h6 class="mb-10">Rata-rata Usage</h6>
+                <h3 class="text-bold mb-10">4,5 jam</h3>
+              </div>
+            </div>
+            <!-- End Icon Cart -->
+          </div>
+          <!-- End Col -->
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="icon-card mb-30">
+              <div class="icon primary">
+                <i class="lni lni-laptop-phone"></i>
+              </div>
+              <div class="content">
+                <h6 class="mb-10">Aplikasi Favorit Users</h6>
+                <h3 class="text-bold mb-10">Instagram</h3>
+              </div>
+            </div>
+            <!-- End Icon Cart -->
+          </div>
+          <!-- End Col -->
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="icon-card mb-30">
+              <div class="icon orange">
+                <i class="lni lni-user"></i>
+              </div>
+              <div class="content">
+                <h6 class="mb-10">Top User</h6>
+                <h3 class="text-bold mb-10">Hydtech</h3>
+              </div>
+            </div>
+            <!-- End Icon Cart -->
+          </div>
+          <!-- End Col -->
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card-style mb-30">
+              <div class="chart">
+                <canvas id="Chart2"
+                  style="width: 663px; height: 400px; margin-left: -35px; display: block; box-sizing: border-box;"
+                  width="1326" height="800"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       <!-- end container -->
     </section>
@@ -275,95 +342,115 @@
   <script src="./assets/js/main.js"></script>
 
   <script>
-    // ================== chart categoryApplication start
-    const ctxPieCategoryApplication = document.getElementById("pieCategoryApplication").getContext("2d");
-    const pieCategoryApplication = new Chart(ctxPieCategoryApplication, {
-      type: "doughnut",
+    // =========== Bar Chart
+    const ctx2 = document.getElementById("Chart2").getContext("2d");
+    const chart2 = new Chart(ctx2, {
+      type: "bar",
       data: {
-        labels: ["Social", "Entertainment", "Education"],
+        labels: [
+          "Seedling",
+          "Sprout",
+          "Explorer",
+          "Trailblazer",
+          "Mountaineer",
+          "Skywalker",
+          "Digital Sage",
+        ],
         datasets: [
           {
-            data: [10, 20, 25],
-            backgroundColor: ["#C0392B", "#2980B9", "#27AE60"],
+            label: "",
+            backgroundColor: "#4A6CF7",
+            borderRadius: 30,
+            data: [
+              80, 70, 100, 70, 65, 80, 69,
+            ],
           },
         ],
       },
       options: {
         plugins: {
           tooltip: {
-            backgroundColor: "#F3F6F8",
-            titleColor: "#8F92A1",
-            titleFontSize: 12,
-            bodyColor: "#171717",
-            bodyFont: {
-              weight: "bold",
-              size: 16,
-            },
-            multiKeyBackground: "transparent",
-            displayColors: false,
-            padding: {
-              x: 30,
-              y: 10,
-            },
-            bodyAlign: "center",
-            titleAlign: "center",
-            enabled: true,
-          },
-          legend: {
-            display: false,
-          },
-        },
-        title: {
-          display: false,
-        },
-      },
-    });
-    // =========== chart categoryApplication end
+            callbacks: {
+              titleColor: function (context) {
+                return "#8F92A1";
+              },
+              label: function (context) {
+                let label = context.dataset.label || "";
 
-    // ================== chart categoryApplication start
-    const ctxPieViolationApplication = document.getElementById("pieViolationApplication").getContext("2d");
-    const pieViolationApplication = new Chart(ctxPieViolationApplication, {
-      type: "doughnut",
-      data: {
-        labels: ["Facebook", "Instagram", "TikTok", "X", "Threads"],
-        datasets: [
-          {
-            data: [10, 20, 100, 70, 25],
-            backgroundColor: ["#1877F2", "#E4405F", "#E4405F", "#000000", "#7E7E7E"],
-          },
-        ],
-      },
-      options: {
-        plugins: {
-          tooltip: {
-            backgroundColor: "#F3F6F8",
-            titleColor: "#8F92A1",
-            titleFontSize: 12,
-            bodyColor: "#171717",
-            bodyFont: {
-              weight: "bold",
-              size: 16,
+                if (label) {
+                  label += ": ";
+                }
+                label += context.parsed.y;
+                return label;
+              },
             },
-            multiKeyBackground: "transparent",
+            backgroundColor: "#F3F6F8",
+            titleAlign: "center",
+            bodyAlign: "center",
+            titleFont: {
+              size: 12,
+              weight: "bold",
+              color: "#8F92A1",
+            },
+            bodyFont: {
+              size: 16,
+              weight: "bold",
+              color: "#171717",
+            },
             displayColors: false,
             padding: {
               x: 30,
               y: 10,
             },
-            bodyAlign: "center",
-            titleAlign: "center",
-            enabled: true,
           },
+        },
+        layout: {
+          padding: {
+            top: 15,
+            right: 15,
+            bottom: 15,
+            left: 15,
+          },
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            grid: {
+              display: false,
+              drawTicks: false,
+              drawBorder: false,
+            },
+            ticks: {
+              padding: 35,
+              max: 1200,
+              min: 0,
+            },
+          },
+          x: {
+            grid: {
+              display: false,
+              drawBorder: false,
+              color: "rgba(143, 146, 161, .1)",
+              drawTicks: false,
+              zeroLineColor: "rgba(143, 146, 161, .1)",
+            },
+            ticks: {
+              padding: 20,
+            },
+          },
+        },
+        plugins: {
           legend: {
             display: false,
           },
-        },
-        title: {
-          display: false,
+          title: {
+            display: false,
+          },
         },
       },
     });
-    // =========== chart categoryApplication end
+    // =========== Bar Chart end
 
     // Logout
     function logout() {
